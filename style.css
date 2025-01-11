@@ -37,3 +37,84 @@ button{
   font-size: 14px;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 698){
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+  }
+  
+  .calculator {
+    background-color: aqua;
+    padding: 20px;
+    height: auto;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
+    width: 100%; /* Full width */
+    height: 60px; /* Reduced height for mobile */
+    border-radius: 5px;
+    background-color: rgba(225, 225, 225, 1);
+    font-size: 24px; /* Adjust font size for mobile */
+    color: darkslateblue;
+    font-family: monospace;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  ::placeholder {
+    color: darkslateblue;
+    font-size: 24px;
+  }
+  
+  .rw1,
+  .rw {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Align buttons properly */
+  }
+  
+  button {
+    flex: 1;
+    margin: 5px; /* Adjust spacing */
+    height: 50px; /* Larger touch targets for mobile */
+    font-size: 16px; /* Increase button text size */
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  button[type="button"]:active {
+    transform: scale(0.95); /* Add a press effect */
+  }
+  
+  button:last-child {
+    flex: 2; /* Make the "=" button wider */
+  }
+  
+  @media (max-width: 600px) {
+    .calculator {
+      padding: 15px; /* Reduce padding on small screens */
+    }
+  
+    input {
+      height: 50px; /* Further reduce height for very small screens */
+      font-size: 20px;
+    }
+  
+    button {
+      height: 45px;
+      font-size: 14px;
+    }
+  }
+  
+}
